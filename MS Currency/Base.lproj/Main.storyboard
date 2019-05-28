@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="MusajRates" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="bYJ-6E-091">
+                                <rect key="frame" x="129" y="468" width="156" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="n9R-BD-uug"/>
+                                </constraints>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" keyboardType="phonePad"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" verticalCompressionResistancePriority="751" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3uC-m3-E9J">
+                                <rect key="frame" x="160" y="513" width="94" height="30"/>
+                                <color key="backgroundColor" red="0.59215686270000001" green="0.19418223409999999" blue="0.1464401058" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="acd-tt-mYl"/>
+                                </constraints>
+                                <state key="normal" title="Convert">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="buttonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="EML-Wd-Le2"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="GBP(£)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xia-SK-ITh">
+                                <rect key="frame" x="52" y="477" width="57" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="My6-Ue-Qm9"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Price" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="krz-fP-1Ze">
+                                <rect key="frame" x="129" y="398" width="156.5" height="64"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="64" id="OM7-1u-Y8V"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="54"/>
+                                <color key="textColor" red="0.94509803920000002" green="0.65490196079999996" blue="0.20392156859999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="g7L-wY-BKK">
+                                <rect key="frame" x="9" y="626" width="396" height="216"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="8zR-cF-Cse"/>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="Kdw-Ru-iRP"/>
+                                </connections>
+                            </pickerView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="gbp" translatesAutoresizingMaskIntoConstraints="NO" id="7dB-ME-pMm">
+                                <rect key="frame" x="52" y="108" width="291" height="151"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="151" id="Kqe-gZ-iDo"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.070588235294117646" green="0.52941176470588236" blue="0.59215686274509804" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="krz-fP-1Ze" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="129" id="26A-q9-JZT"/>
+                            <constraint firstItem="g7L-wY-BKK" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="9" id="CVx-VX-Uac"/>
+                            <constraint firstItem="bYJ-6E-091" firstAttribute="top" secondItem="krz-fP-1Ze" secondAttribute="bottom" constant="6" id="HPu-mg-7ab"/>
+                            <constraint firstItem="7dB-ME-pMm" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="52" id="Hjb-t2-hKy"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="g7L-wY-BKK" secondAttribute="bottom" constant="20" id="MzQ-FC-gES"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="3uC-m3-E9J" secondAttribute="trailing" constant="160" id="Z5Y-QI-zdx"/>
+                            <constraint firstItem="3uC-m3-E9J" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="160" id="ZNk-uh-aSI"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="7dB-ME-pMm" secondAttribute="trailing" constant="71" id="ae8-X0-RLq"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="krz-fP-1Ze" secondAttribute="trailing" constant="128.5" id="d2K-jZ-Ugb"/>
+                            <constraint firstItem="Xia-SK-ITh" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="52" id="hOj-wH-FsR"/>
+                            <constraint firstItem="3uC-m3-E9J" firstAttribute="top" secondItem="bYJ-6E-091" secondAttribute="bottom" constant="15" id="jsa-89-iMD"/>
+                            <constraint firstItem="g7L-wY-BKK" firstAttribute="top" secondItem="Xia-SK-ITh" secondAttribute="bottom" constant="128" id="lbY-rM-s2C"/>
+                            <constraint firstItem="bYJ-6E-091" firstAttribute="leading" secondItem="Xia-SK-ITh" secondAttribute="trailing" constant="20" id="pRO-ic-oYC"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="bYJ-6E-091" secondAttribute="trailing" constant="129" id="qbS-0Y-pBW"/>
+                            <constraint firstItem="g7L-wY-BKK" firstAttribute="top" secondItem="3uC-m3-E9J" secondAttribute="bottom" constant="83" id="rpj-A1-bgI"/>
+                            <constraint firstItem="g7L-wY-BKK" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="x3z-tY-1j6"/>
+                            <constraint firstItem="7dB-ME-pMm" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="64" id="xbT-K8-Jss"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="output" destination="krz-fP-1Ze" id="Q3K-G8-UJk"/>
+                        <outlet property="pickerView" destination="g7L-wY-BKK" id="pYA-dg-k1g"/>
+                        <outlet property="textField" destination="bYJ-6E-091" id="4uj-ie-Tvk"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="136.23188405797103" y="103.79464285714285"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="gbp" width="512" height="512"/>
+    </resources>
+</document>
