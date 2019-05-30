@@ -1,3 +1,3 @@
 # MS-Currency
 
-Currency converter IOS App
+IOS Currency converter app using Swift
